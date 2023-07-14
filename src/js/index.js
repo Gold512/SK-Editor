@@ -1,4 +1,4 @@
-import { JSONEditor } from "../../node_modules/vanilla-jsoneditor/index.js";
+import { JSONEditor } from "vanilla-jsoneditor";
 import { input } from './input.js';
 
 const origIV = [0x41, 0x68, 0x62, 0x6f, 0x6f, 0x6c, 0x0, 0x0];
