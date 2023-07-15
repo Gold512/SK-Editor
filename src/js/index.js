@@ -104,7 +104,11 @@ const editor = new JSONEditor({
                 },
                 {
                     onClick: () => {
-                        let json = unescapeJSONStr(JSON.stringify(editor.get().json));
+                        let editorContent = editor.get();
+
+                        let json = editorContent.json ? JSON.stringify(editorContent.json) : editorContent.text;
+                        json = unescapeJSONStr(json);
+                        
                         let key;
                         if(openedFileName.includes('statistic')) {
                             key = statistic;
